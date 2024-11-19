@@ -18,7 +18,7 @@
           <p class="mt-4 text-gray-200 text-lg">
             Kami memberikan layanan terbaik untuk pembangunan infrastruktur, perencanaan, dan pengawasan proyek Anda.
           </p>
-          <a href="#services" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-500 transition">
+          <a href="#layanan-kami" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-500 transition no-underline">
             Lihat Layanan Kami
           </a>
         </div>
@@ -30,7 +30,7 @@
 <div id="layanan-kami" class="bg-gray-100">
   <!-- Layanan Kami Section -->
   <section class="py-12">
-    <h2 class="text-center text-3xl font-bold mb-8">Layanan Kami</h2>
+    <h2 class="text-center text-3xl font-bold mb-8 mt-5">Layanan Kami</h2>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
       <!-- Layanan 1 -->
       <div class="p-6 bg-white shadow rounded-lg">
@@ -61,24 +61,30 @@
 
   <!-- Tentang Kami Section -->
   <section id="tentang-kami" class="py-12 bg-white">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-5">
       <div>
         <img src="https://via.placeholder.com/500" alt="Blueprint" class="rounded-lg shadow">
       </div>
       <div>
         <h2 class="text-3xl font-bold">Tentang Kami</h2>
-        <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet purus sit amet metus venenatis, lectus magna fringilla urna.</p>
-        <a href="#" class="mt-4 inline-block text-green-600 font-bold">Lebih Lanjut</a>
+        <p class="mt-4 text-gray-600"><b>CV. Karsa Prawira</b> adalah Perusahaan berbadan hukum yang bergerak dalam bidang pelayanan Jasa Konsultansi 
+          dengan lingkup pekerjaan Konstruksi dan Non – Konstruksi dari suatu kegiatan pembangunan yang diselenggarakan Pemerintah maupun Swasta.
+           Dalam menangani setiap pekerjaan cv. Karsa prawira selalu mengutamakan pelayanan jasa yang optimal dan memberikan yang terbaik kepada Pemberi Tugas.
+            Untuk mewujudkan pelayanan yang demikian cv. Karsa prawira menerapkan sistem manajemen proyek secara khusus untuk setiap pekerjaan / proyek yang ditangani 
+            dan mengerahkan tenaga ahli yang berpengalaman dan bekerja secara profesional.</p>
+        <a href="#" class="mt-4 inline-block text-green-600 font-bold no-underline">Lebih Lanjut <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
   <!-- Project Kami Section -->
   <section id="projek" class="py-12">
-    <div class="container mx-auto">
+    <div class="container mx-auto mt-5">
       <div class="flex justify-between items-center mb-8">
-        <h2 class="text-3xl font-bold">Project Kami</h2>
-        <a href="#" class="text-green-600">Semua</a>
+        <h2 class="text-3xl font-bold">Projek Kami</h2>
+        <a href="{{ route('projek') }}" class="text-green-600 text-l font-bold no-underline">
+            Semua <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Project 1 -->
@@ -136,4 +142,7 @@
     </div>
   </section>
 </div>
+
+<script src="{{ asset('isi.js') }}"></script>
+
 @endsection

@@ -20,8 +20,14 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/', function () {
-    return view('tampilan.isi'); // Adjust if needed based on your folder structure
-});
+    return view('tampilan.isi');
+})->name('beranda');
+
+
+// KONTEN
+Route::get('/projek', function () {
+    return view('konten.projek');
+})->name('projek');
 
 
 require __DIR__.'/auth.php';

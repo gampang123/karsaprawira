@@ -27,7 +27,15 @@ Route::get('/', function () {
 // KONTEN
 Route::get('/projek', function () {
     return view('konten.projek');
-})->name('projek');
+})->name('projek'); 
+
+Route::get('/tentangkami', function () {
+    return view('konten.tentangkami');
+})->name('tentangkami'); 
+
+Route::get('/kontak', function () {
+    return view('konten.kontak');
+})->name('kontak'); 
 
 
 require __DIR__.'/auth.php';

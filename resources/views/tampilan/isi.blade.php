@@ -30,34 +30,35 @@
 <div id="layanan-kami" class="bg-gray-100">
   <!-- Layanan Kami Section -->
   <section class="py-12">
-    <h2 class="text-center text-3xl font-bold mb-8 mt-5">Layanan Kami</h2>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-      <!-- Layanan 1 -->
-      <div class="p-6 bg-white shadow rounded-lg">
-        <i class="fas fa-pencil-ruler text-4xl text-black-600 mb-4"></i>
-        <h3 class="text-xl font-semibold">Planning</h3>
-        <p class="mt-2 text-gray-600">Perencanaan sipil dan bangunan.</p>
-      </div>
-      <!-- Layanan 2 -->
-      <div class="p-6 bg-white shadow rounded-lg">
-        <i class="fas fa-hammer text-4xl text-black-600 mb-4"></i>
-        <h3 class="text-xl font-semibold">Konstruksi</h3>
-        <p class="mt-2 text-gray-600">Pelaksanaan konstruksi proyek.</p>
-      </div>
-      <!-- Layanan 3 -->
-      <div class="p-6 bg-white shadow rounded-lg">
-        <i class="fas fa-paint-roller text-4xl text-black-600 mb-4"></i>
-        <h3 class="text-xl font-semibold">Eksterior</h3>
-        <p class="mt-2 text-gray-600">Desain dan pengembangan eksterior.</p>
-      </div>
-      <!-- Layanan 4 -->
-      <div class="p-6 bg-white shadow rounded-lg">
-        <i class="fas fa-tools text-4xl text-black-600 mb-4"></i>
-        <h3 class="text-xl font-semibold">Interior</h3>
-        <p class="mt-2 text-gray-600">Perbaikan dan pengembangan interior.</p>
-      </div>
-    </div>
-  </section>
+        <h2 class="text-center text-3xl font-bold mb-8 mt-5">Layanan Kami</h2>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <!-- Layanan 1 -->
+            <div class="p-6 bg-white shadow rounded-lg" data-service="planning">
+                <i class="fas fa-pencil-ruler text-4xl text-black-600 mb-4"></i>
+                <h3 class="text-xl font-semibold">Planning</h3>
+                <p class="mt-2 text-gray-600">Perencanaan sipil dan bangunan.</p>
+            </div>
+            <!-- Layanan 2 -->
+            <div class="p-6 bg-white shadow rounded-lg" data-service="konstruksi">
+                <i class="fas fa-hammer text-4xl text-black-600 mb-4"></i>
+                <h3 class="text-xl font-semibold">Konstruksi</h3>
+                <p class="mt-2 text-gray-600">Pelaksanaan konstruksi proyek.</p>
+            </div>
+            <!-- Layanan 3 -->
+            <div class="p-6 bg-white shadow rounded-lg" data-service="eksterior">
+                <i class="fas fa-paint-roller text-4xl text-black-600 mb-4"></i>
+                <h3 class="text-xl font-semibold">Eksterior</h3>
+                <p class="mt-2 text-gray-600">Desain dan pengembangan eksterior.</p>
+            </div>
+            <!-- Layanan 4 -->
+            <div class="p-6 bg-white shadow rounded-lg" data-service="interior">
+                <i class="fas fa-tools text-4xl text-black-600 mb-4"></i>
+                <h3 class="text-xl font-semibold">Interior</h3>
+                <p class="mt-2 text-gray-600">Perbaikan dan pengembangan interior.</p>
+            </div>
+        </div>
+    </section>
+
 
   <!-- Tentang Kami Section -->
   <section id="tentang-kami" class="py-12 bg-white">
@@ -72,7 +73,7 @@
            Dalam menangani setiap pekerjaan cv. Karsa prawira selalu mengutamakan pelayanan jasa yang optimal dan memberikan yang terbaik kepada Pemberi Tugas.
             Untuk mewujudkan pelayanan yang demikian cv. Karsa prawira menerapkan sistem manajemen proyek secara khusus untuk setiap pekerjaan / proyek yang ditangani 
             dan mengerahkan tenaga ahli yang berpengalaman dan bekerja secara profesional.</p>
-        <a href="#" class="mt-4 inline-block text-green-600 font-bold no-underline">Lebih Lanjut <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="{{ route ('tentangkami') }}" class="mt-4 inline-block text-green-600 font-bold no-underline">Lebih Lanjut <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>

@@ -54,18 +54,45 @@ backToTopButton.addEventListener('click', () => {
 });
 
 // Modal View for Projects
-document.querySelectorAll('.bg-white.shadow.rounded-lg').forEach((projectCard, index) => {
+document.querySelectorAll('.bg-white.shadow.rounded-lg').forEach((projectCard) => {
     projectCard.addEventListener('click', () => {
+        // Ambil nama layanan dari data-service
+        const service = projectCard.getAttribute('data-service');
+
+        // Deskripsi dan ikon untuk setiap layanan
+        const details = {
+            planning: {
+                description: 'Planning adalah perencanaan sipil dan bangunan untuk memastikan proyek berjalan lancar.',
+                icon: '<i class="fas fa-pencil-ruler text-6xl text-black-600 mb-4"></i>'
+            },
+            konstruksi: {
+                description: 'Konstruksi adalah pelaksanaan pembangunan proyek dari awal hingga selesai.',
+                icon: '<i class="fas fa-hammer text-6xl text-black-600 mb-4"></i>'
+            },
+            eksterior: {
+                description: 'Eksterior melibatkan desain dan pengembangan area luar bangunan.',
+                icon: '<i class="fas fa-paint-roller text-6xl text-black-600 mb-4"></i>'
+            },
+            interior: {
+                description: 'Interior mencakup perbaikan dan pengembangan bagian dalam bangunan.',
+                icon: '<i class="fas fa-tools text-6xl text-black-600 mb-4"></i>'
+            }
+        };
+
+        // Buat modal
         const modal = document.createElement('div');
         modal.classList.add('fixed', 'inset-0', 'bg-gray-800', 'bg-opacity-75', 'flex', 'justify-center', 'items-center');
         modal.innerHTML = `
             <div class="bg-white p-6 rounded-lg max-w-lg text-center">
-                <h3 class="text-xl font-semibold mb-4">Project Detail</h3>
-                <p>Ini adalah detail proyek ${index + 1}.</p>
+                ${details[service].icon}
+                <h3 class="text-xl font-semibold mb-4">${service.charAt(0).toUpperCase() + service.slice(1)}</h3>
+                <p>${details[service].description}</p>
                 <button id="close-modal" class="mt-4 px-6 py-2 bg-red-600 text-white rounded hover:bg-red-500">Tutup</button>
             </div>
         `;
         document.body.appendChild(modal);
+
+        // Tutup modal
         modal.querySelector('#close-modal').addEventListener('click', () => {
             modal.remove();
         });

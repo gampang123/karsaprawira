@@ -34,16 +34,15 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          <a href="{{ route('beranda') }}"><img   class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"></a>
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Menu Tautan -->
-            <a href="#beranda" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Beranda</a>
             <a href="#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Layanan</a>
-            <a href="#tentang-kami" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Tentang Kami</a>
-            <a href="#projek" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Projek</a>
-            <a href="#kontak" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Kontak</a>
+            <a href="{{ route ('tentangkami') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Tentang Kami</a>
+            <a href="{{ route ('projek') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Projek</a>
+            <a href="{{ route ('kontak') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Kontak</a>
           </div>
         </div>
       </div>

@@ -3,12 +3,6 @@
 <section id="projek-kami" class="py-12 bg-gray-100">
     <div class="container mx-auto px-6 md:px-20 mt-10">
         <!-- Header -->
-
-        <!-- BUTTON -->
-        <a href="{{ route('beranda') }}" class="text-black text-l font-bold no-underline">
-        <i class="fa-solid fa-arrow-left"></i>
-            Kembali
-        </a>
         <div class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-800">Proyek Kami</h1>
             <p class="mt-4 text-gray-600 text-lg">

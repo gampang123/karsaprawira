@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Superadmin\MasterController;
+use App\Http\Controllers\Superadmin\ProjekController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -36,6 +38,17 @@ Route::get('/tentangkami', function () {
 Route::get('/kontak', function () {
     return view('konten.kontak');
 })->name('kontak'); 
+
+// SUPERADMIN
+Route::get('/superadmin/master', [MasterController::class, 'master'])->name('superadmin.master');
+
+// Route untuk Projek
+Route::get('/superadmin/projek/projek-list', [ProjekController::class, 'projek'])->name('superadmin.projek.projek-list');
+Route::get('/superadmin/projek/projek-create', [ProjekController::class, 'create'])->name('superadmin.projek.projek-create');
+Route::post('/superadmin/projek/projek-store', [ProjekController::class, 'store'])->name('superadmin.projek.projek-store');
+Route::get('/superadmin/projek/projek-edit/{id}', [ProjekController::class, 'edit'])->name('superadmin.projek.projek-edit');
+Route::put('/superadmin/projek/projek-update/{id}', [ProjekController::class, 'update'])->name('superadmin.projek.projek-update');
+Route::delete('/superadmin/projek/projek-delete/{id}', [ProjekController::class, 'destroy'])->name('superadmin.projek.projek-delete');
 
 
 require __DIR__.'/auth.php';

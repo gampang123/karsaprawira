@@ -35,7 +35,7 @@
                                     @forelse($projects as $index => $project)
                                     <tr>
                                         <td class="number">{{ $index + 1 }}</td>
-                                        <td><img src="{{ asset('./storage/projects' . $project->foto_path) }}" alt="Foto Projek" width="100"></td>
+                                        <td><img src="{{ asset('storage/' . $project->foto_path) }}" alt="Foto Projek" width="100"></td>
                                         <td>{{ $project->nama_projek }}</td>
                                         <td>{{ $project->deskripsi }}</td>
                                         <td>

@@ -23,34 +23,37 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('superadmin.projek.projek-edit', $project->id) }}" method="POST" enctype="multipart/form-data">
                                 @method('PATCH')
                                 @csrf
                                 @if (count($errors) > 0)
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 @endif
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Upload Foto :</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input id="" type="file" name="Nama" class="form-control" required>
+                                        <input type="file" name="foto" class="form-control">
+                                        @if ($project->foto_path)
+                                            <img src="{{ asset('storage/' . $project->foto_path) }}" alt="Project Photo" class="mt-2" width="100">
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Projek :</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input id="" type="text" name="Nama" class="form-control" required>
+                                        <input type="text" name="nama_projek" class="form-control" value="{{ old('nama_projek', $project->nama_projek) }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi :</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input id="" type="text" name="Nama" class="form-control" required>
+                                        <textarea name="deskripsi" class="form-control" rows="5">{{ old('deskripsi', $project->deskripsi) }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

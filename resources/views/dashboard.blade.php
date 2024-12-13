@@ -11,7 +11,7 @@
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{ asset('style-super.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+<link rel="stylesheet" href="{{ asset('components.css') }}">
 <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 
 </head>
@@ -31,14 +31,8 @@
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a href="features-profile.html" class="dropdown-item has-icon">
+              <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
               </a>
               <div class="dropdown-divider"></div>
               <form method="POST" action="{{ route('logout') }}">

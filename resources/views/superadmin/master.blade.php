@@ -2,9 +2,6 @@
 
 @section('superadmin.master')
 
-
-<!-- SIDE BAR -->
-      <!-- Main Content -->
         <section class="section">
           <div class="section-header">
             <h1>Dashboard</h1>
@@ -19,7 +16,7 @@
                     <h4>Projek</h4>
                   </div>
                   <div class="card-body">
-                    42
+                  {{ $projectsCount }}
                   </div>
                 </div>
               </div>

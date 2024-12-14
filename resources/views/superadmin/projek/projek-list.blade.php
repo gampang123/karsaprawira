@@ -28,7 +28,7 @@
                                         <th width=100>Foto Projek</th>
                                         <th width=150>Nama Projek</th>
                                         <th width=150>Deskripsi</th>
-                                        <th width=90>Aksi</th>
+                                        <th width=110>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,10 +40,13 @@
                                         <td>{{ $project->deskripsi }}</td>
                                         <td>
                                             <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-4">
                                                     <a class="btn btn-xs btn-success btn-flat" href="{{ route('superadmin.projek.projek-edit', $project->id) }}"><i class="fa fa-pen"></i></a>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-4">
+                                                    <a class="btn btn-xs btn-primary btn-flat" href=""><i class="fa fa-file"></i></a>
+                                                </div>
+                                                <div class="col-4">
                                                     <form action="{{ route('superadmin.projek.projek-delete', $project->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
                                                         @csrf
                                                         @method('DELETE')

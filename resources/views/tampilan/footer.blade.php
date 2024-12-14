@@ -10,7 +10,7 @@
             <div>
                 <h3 class="text-white text-xl font-semibold">Menu</h3>
                 <ul class="mt-2 space-y-2 text-gray-400">
-                    <li><a href="#beranda" class="hover:text-white text-white no-underline">Beranda</a></li>
+                    <li><a href="#utama" class="hover:text-white text-white no-underline">Beranda</a></li>
                     <li><a href="#layanan-kami" class="hover:text-white text-white no-underline">Layanan Kami</a></li>
                     <li><a href="#tentang-kami" class="hover:text-white text-white no-underline">Tentang Kami</a></li>
                     <li><a href="#projek" class="hover:text-white text-white no-underline">Projek</a></li>

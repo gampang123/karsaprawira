@@ -1,8 +1,3 @@
-@extends('welcome')
-
-
-@section('content')
-
 <section id="beranda" class="relative h-screen">
     <div class="relative h-full">
       <!-- Background Image -->
@@ -10,7 +5,7 @@
       <!-- Overlay -->
       <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-transparent to-gray-900 opacity-50"></div>
       <!-- Content -->
-      <div class="absolute inset-0 flex items-center justify-start px-8 md:px-20">
+      <div id="utama" class="absolute inset-0 flex items-center justify-start px-8 md:px-20">
         <div class="text-white max-w-xl">
           <h1 class="text-4xl md:text-5xl font-bold leading-tight">
             Solusi Konstruksi dan Nonkonstruksi Terbaik
@@ -79,42 +74,29 @@
   </section>
 
   <!-- Project Kami Section -->
-  <section id="projek" class="py-12">
-    <div class="container mx-auto mt-5">
-      <div class="flex justify-between items-center mb-8">
-        <h2 class="text-3xl font-bold">Projek Kami</h2>
-        <a href="{{ route('projek') }}" class="text-green-600 text-l font-bold no-underline">
-            Semua <i class="fa-solid fa-arrow-right"></i>
-        </a>
+  <section id="projek" class="py-12 bg-gray-50">
+      <div class="container mx-auto mt-5 px-4">
+          <h2 class="text-3xl font-bold text-gray-800">Projek Kami</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
+              @forelse ($projects as $project)
+                  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                      <img 
+                          src="{{ $project->foto_path ? asset('storage/' . $project->foto_path) : 'https://via.placeholder.com/400' }}" 
+                          alt="{{ $project->nama_projek }}" 
+                          class="w-full h-48 object-cover"
+                      >
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold text-gray-800">{{ $project->nama_projek }}</h3>
+                          <p class="mt-2 text-gray-600">{{ $project->deskripsi }}</p>
+                      </div>
+                  </div>
+              @empty
+                  <p class="text-gray-500">Belum ada projek yang tersedia.</p>
+              @endforelse
+          </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-white shadow rounded-lg">
-          <img src="https://via.placeholder.com/400" alt="Project 1" class="rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Proyek Konstruksi Taman</h3>
-            <p class="mt-2 text-gray-600">Pembangunan taman kota di Jakarta.</p>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="bg-white shadow rounded-lg">
-          <img src="https://via.placeholder.com/400" alt="Project 2" class="rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Proyek Rumah Mewah</h3>
-            <p class="mt-2 text-gray-600">Pembangunan rumah mewah di Bandung.</p>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="bg-white shadow rounded-lg">
-          <img src="https://via.placeholder.com/400" alt="Project 3" class="rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Proyek Restoran Modern</h3>
-            <p class="mt-2 text-gray-600">Renovasi restoran di Surabaya.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
+
 
   <!-- Portofolio Section -->
   <section class="py-12 bg-white">
@@ -146,4 +128,3 @@
 
 <script src="{{ asset('isi.js') }}"></script>
 
-@endsection

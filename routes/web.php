@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Superadmin\MasterController;
 use App\Http\Controllers\Superadmin\ProjekController;
+use App\Http\Controllers\Superadmin\DetailController;
 use App\Http\Controllers\Konten\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,5 +49,18 @@ Route::prefix('superadmin/projek')->name('superadmin.projek.')->group(function (
     Route::put('/projek-update/{id}', [ProjekController::class, 'update'])->name('projek-update');
     Route::delete('/projek-delete/{id}', [ProjekController::class, 'destroy'])->name('projek-delete');
 });
+
+
+Route::prefix('superadmin/detail')->name('superadmin.detail.')->group(function () {
+    Route::get('/detail-list', [DetailController::class, 'detail'])->name('detail-list');
+    Route::get('/detail-create', [DetailController::class, 'create'])->name('detail-create');
+    Route::post('/detail-store', [DetailController::class, 'store'])->name('detail-store');
+    Route::get('/detail-edit/{id_detail}', [DetailController::class, 'edit'])->name('detail-edit');
+    Route::patch('/detail-update/{id_detail}', [DetailController::class, 'update'])->name('detail-update');
+    Route::delete('/detail-destroy/{id_detail}', [DetailController::class, 'destroy'])->name('detail-destroy');
+});
+
+
+
 
 require __DIR__.'/auth.php';

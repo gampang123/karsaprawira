@@ -39,7 +39,7 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Menu Tautan -->
-            <a href="#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Layanan</a>
+            <a href="{{ route('beranda') }}#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Layanan</a>
             <a href="{{ route ('tentangkami') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Tentang Kami</a>
             <a href="{{ route ('projek') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Projek</a>
             <a href="{{ route ('kontak') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Kontak</a>

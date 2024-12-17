@@ -16,7 +16,8 @@ class ProjekController extends Controller
     {
         $projects = Project::all(); // Mengambil semua data project dari database
         return view('superadmin.projek.projek-list', compact('projects'));
-    }
+        return $this->belongsTo(Project::class, 'id_projek');
+        }
 
     /**
      * Show the form for creating a new project.

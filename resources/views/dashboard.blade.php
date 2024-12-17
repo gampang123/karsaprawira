@@ -69,8 +69,15 @@
             <li><a class="nav-link" href="{{ route('superadmin.projek.projek-list') }}">Daftar Projek</a></li>
             <li><a class="nav-link" href="{{ route('superadmin.projek.projek-create') }}">Tambah Projek</a></li>
         </ul>
-        </li>        
-    </ul>
+    </li>     
+    <li class="menu-header">Detail</li>   
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i> <span>Detail</span></a>
+        <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{ route('superadmin.detail.detail-list') }}">Daftar Detail</a></li>
+            <li><a class="nav-link" href="{{ route('superadmin.detail.detail-create') }}">Tambah Detail</a></li>
+        </ul>
+    </li>        
 
         </aside>
       </div>

@@ -47,4 +47,14 @@ class Project extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+     /**
+     * Define the one-to-many relationship with the Detail model.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function details()
+    {
+        return $this->hasMany(Detail::class, 'id_projek');
+    }
 }

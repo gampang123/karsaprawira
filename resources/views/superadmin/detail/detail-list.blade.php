@@ -48,9 +48,11 @@
                                                     @if ($detail->foto_1)
                                                         <div><img src="{{ asset('storage/' . $detail->foto_1) }}" alt="Foto 1" width="50"></div>
                                                     @endif
+                                                    <br>
                                                     @if ($detail->foto_2)
                                                         <div><img src="{{ asset('storage/' . $detail->foto_2) }}" alt="Foto 2" width="50"></div>
                                                     @endif
+                                                    <br>
                                                     @if ($detail->foto_3)
                                                         <div><img src="{{ asset('storage/' . $detail->foto_3) }}" alt="Foto 3" width="50"></div>
                                                     @endif

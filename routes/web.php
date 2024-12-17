@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Superadmin\MasterController;
 use App\Http\Controllers\Superadmin\ProjekController;
 use App\Http\Controllers\Superadmin\DetailController;
+use App\Http\Controllers\Superadmin\DetailProjekController;
 use App\Http\Controllers\Konten\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -61,6 +62,7 @@ Route::prefix('superadmin/detail')->name('superadmin.detail.')->group(function (
 });
 
 
-
+Route::get('superadmin/detail-projek/{id_projek}', [DetailProjekController::class, 'detailprojek'])
+    ->name('superadmin.detail-projek.detail-projek');
 
 require __DIR__.'/auth.php';

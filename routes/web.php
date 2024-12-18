@@ -6,6 +6,7 @@ use App\Http\Controllers\Superadmin\ProjekController;
 use App\Http\Controllers\Superadmin\DetailController;
 use App\Http\Controllers\Superadmin\DetailProjekController;
 use App\Http\Controllers\Konten\WelcomeController;
+use App\Http\Controllers\Konten\ProjekKontenController;
 use Illuminate\Support\Facades\Route;
 
 // Home route
@@ -25,9 +26,10 @@ Route::middleware('auth')->group(function () {
 });
 
 // Content routes
-Route::get('/projek', function () {
-    return view('konten.projek');
-})->name('projek'); 
+
+Route::get('/projek', [ProjekKontenController::class, 'projek'])->name('konten.projek');
+Route::get('/projek/{id_projek}', [ProjekKontenController::class, 'show'])->name('konten.projek.detail');
+
 
 Route::get('/tentangkami', function () {
     return view('konten.tentangkami');

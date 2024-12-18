@@ -28,4 +28,9 @@ class Detail extends Model
     {
         return $this->belongsTo(Project::class, 'id_projek');
     }
+
+    public function details()
+    {
+        return $this->hasMany(Detail::class, 'id_projek');
+    }
 }

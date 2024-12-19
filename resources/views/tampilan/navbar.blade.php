@@ -3,20 +3,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('page/navbar.css') }}">
 
 
-<style>
-  #mobile-menu {
-  display: none;
-}
-
-#mobile-menu.active {
-  display: block;
-}
-
-</style>
-
-<nav class="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
+<nav class="fixed top-0 left-0 w-screen bg-white z-50 shadow-md">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -34,31 +24,26 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <a href="{{ route('beranda') }}"><img   class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"></a>
-        </div>
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <!-- Menu Tautan -->
-            <a href="{{ route('beranda') }}#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Layanan</a>
-            <a href="{{ route ('tentangkami') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Tentang Kami</a>
-            <a href="{{ route ('konten.projek') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Projek</a>
-            <a href="{{ route ('kontak') }}" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">Kontak</a>
-          </div>
+          <li class="list-none"><a href="{{ route('beranda') }}"><img   class="h-10 w-auto" src="{{ asset('landingpage/3.png') }}" alt="Your Company"></a></li>
+          <li class="list-none"><a class="hidden  inset-y-0 sm:block right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 list-none no-underline text-white" href="{{ route ('beranda') }}"><h5>CV. Karsa Prawira</h5></a></li>
         </div>
       </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <div class="hidden inset-y-0 sm:block right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <!-- Login button -->
         <div>
-        @if (Route::has('login'))
-           <nav class="-mx-3 flex flex-1 justify-end">
-             @auth
-             @else
-              <a class="no-underline btn btn-primary ml-2 text-white" href="{{ route('login') }}">
-                Log in
-              </a>
-             @endauth
-            </nav>
-          @endif
+          <div class="flex space-x-4 justify-end">
+            <!-- Menu Tautan -->
+            <a href="{{ route('beranda') }}#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Layanan</a>
+            <a href="{{ route ('tentangkami') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Tentang Kami</a>
+            <a href="{{ route ('konten.projek') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Projek</a>
+            <a href="{{ route ('kontak') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Kontak</a>
+              @if (Route::has('login'))
+              @auth
+              @else
+                <a class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-blue-400 no-underline hover:text-white" href="{{ route('login') }}">Log in</a>
+              @endauth
+            @endif
+          </div> 
         </div>
       </div>
     </div>

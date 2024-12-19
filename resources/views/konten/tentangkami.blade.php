@@ -1,11 +1,14 @@
 @include('tampilan.navbar')
 
-<section id="tentang-kami" class="py-12 bg-gray-100">
+<link rel="stylesheet" href="{{ asset('page/isi.css') }}">
+
+
+<section id="tentang-kami" class="py-12 ">
     <div class="container mx-auto px-6 md:px-20 mt-10">
         <!-- Header -->
         <div class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-800">Tentang Kami</h1>
-            <p class="mt-4 text-gray-600 text-lg">
+            <p class="mt-4 text-white text-lg">
                 Selamat datang di halaman tentang kami! Kami adalah perusahaan yang bergerak di bidang konstruksi dan renovasi bangunan dengan dedikasi tinggi terhadap kualitas dan inovasi.
             </p>
         </div>

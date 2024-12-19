@@ -1,0 +1,27 @@
+body {
+    background: rgb(67,159,217);
+    background: linear-gradient(90deg, rgba(67,159,217,1) 35%, rgba(99,185,77,1) 70%);
+}
+
+.consulting {
+    text-shadow: 0px 1px 8px rgba(167,167,167,0.6);
+}
+
+
+#beranda h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+section {
+    background-image: url('/landingpage/4.png');
+    background-size: 50%; /* Mengecilkan gambar menjadi 50% dari ukuran asli */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    background-position: center; 
+    background-position: top right;
+    background-attachment: fixed;
+}
+
+.tombol {
+    background: rgb(99,185,77);
+    background: linear-gradient(90deg, rgba(99,185,77,1) 35%, rgba(26,119,204,1) 70%);
+}

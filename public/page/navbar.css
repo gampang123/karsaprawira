@@ -1,0 +1,12 @@
+#mobile-menu {
+    display: none;
+  }
+  
+#mobile-menu.active {
+   display: block;
+}
+
+nav {
+    background: rgb(26,119,204);
+    background: linear-gradient(90deg, rgba(26,119,204,1) 35%, rgba(99,185,77,1) 70%);
+}

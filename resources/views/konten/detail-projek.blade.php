@@ -1,10 +1,12 @@
 @include('tampilan.navbar')
 
-<section class="py-12 bg-gray-100">
+<link rel="stylesheet" href="{{ asset('page/isi.css') }}">
+
+<section class="py-12">
     <div class="container mx-auto px-6 md:px-20 mt-10">
         <div class="mb-8">
             <h1 class="text-4xl font-bold text-gray-800">{{ $project->nama_projek }}</h1>
-            <p class="mt-4 text-gray-600">{{ $project->deskripsi }}</p>
+            <p class="mt-4 text-black text-xl">{{ $project->deskripsi }}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,9 +1,13 @@
 @include('tampilan.navbar')
-<section id="projek-kami" class="py-12 bg-gray-100">
+
+<link rel="stylesheet" href="{{ asset('page/isi.css') }}">
+
+
+<section id="projek-kami" class="py-12">
     <div class="container mx-auto px-6 md:px-20 mt-10">
         <div class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-800">Proyek Kami</h1>
-            <p class="mt-4 text-gray-600 text-lg">
+            <p class="mt-4 text-white text-lg">
                 Kami bangga dengan berbagai proyek yang telah kami kerjakan. Lihat karya terbaik kami!
             </p>
         </div>

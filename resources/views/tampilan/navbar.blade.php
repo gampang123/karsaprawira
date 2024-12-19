@@ -24,8 +24,8 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <li class="list-none"><a href="{{ route('beranda') }}"><img   class="h-10 w-auto" src="{{ asset('landingpage/3.png') }}" alt="Your Company"></a></li>
-          <li class="list-none"><a class="hidden  inset-y-0 sm:block right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 list-none no-underline text-white" href="{{ route ('beranda') }}"><h5>CV. Karsa Prawira</h5></a></li>
+          <li class="list-none"><a href="{{ route('konten.isi') }}"><img   class="h-10 w-auto" src="{{ asset('landingpage/3.png') }}" alt="Your Company"></a></li>
+          <li class="list-none"><a class="hidden  inset-y-0 sm:block right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 list-none no-underline text-white" href="{{ route ('konten.isi') }}"><h5>CV. Karsa Prawira</h5></a></li>
         </div>
       </div>
       <div class="hidden inset-y-0 sm:block right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -33,7 +33,7 @@
         <div>
           <div class="flex space-x-4 justify-end">
             <!-- Menu Tautan -->
-            <a href="{{ route('beranda') }}#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Layanan</a>
+            <a href="{{ route('konten.isi') }}#layanan-kami" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Layanan</a>
             <a href="{{ route ('tentangkami') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Tentang Kami</a>
             <a href="{{ route ('konten.projek') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Projek</a>
             <a href="{{ route ('kontak') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 hover:text-black no-underline">Kontak</a>
@@ -53,27 +53,27 @@
   <div class="sm:hidden" id="mobile-menu">
     <ul class="space-y-1 px-2 pb-3 pt-2 list-none">
       <li>
-        <a href="#beranda" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
+        <a href="#konten.isi" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
           Beranda
         </a>
       </li>
       <li>
-        <a href="#layanan-kami" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
+        <a href="{{ route('konten.isi') }}#layanan-kami" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
           Layanan Kami
         </a>
       </li>
       <li>
-        <a href="#tentang-kami" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
+        <a href="{{ route ('tentangkami') }}" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
           Tentang Kami
         </a>
       </li>
       <li>
-        <a href="#projek" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
+        <a href="{{ route ('konten.projek') }}" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
           Projek
         </a>
       </li>
       <li>
-        <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
+        <a href="{{ route ('kontak') }}" class="block rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-100 hover:text-white no-underline">
           Kontak
         </a>
       </li>

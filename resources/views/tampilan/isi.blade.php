@@ -1,3 +1,7 @@
+@extends('welcome')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,3 +142,4 @@
     <script src="{{ asset('isi.js') }}"></script>
 </body>
 </html>
+@endsection

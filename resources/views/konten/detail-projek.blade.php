@@ -1,5 +1,6 @@
-@include('tampilan.navbar')
+@extends('welcome')
 
+@section('content')
 <link rel="stylesheet" href="{{ asset('page/isi.css') }}">
 
 <section class="py-12">
@@ -33,4 +34,4 @@
     </div>
 </section>
 
-@include('tampilan.footer-button')
+@endsection

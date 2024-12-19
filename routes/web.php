@@ -10,7 +10,7 @@ use App\Http\Controllers\Konten\ProjekKontenController;
 use Illuminate\Support\Facades\Route;
 
 // Home route
-Route::get('/', [WelcomeController::class, 'welcome'])->name('beranda');
+Route::get('/', [WelcomeController::class, 'welcome'])->name('konten.isi');
 
 
 // Dashboard route with authentication middleware

@@ -12,6 +12,6 @@ class WelcomeController extends Controller
     public function welcome(): View
     {
         $projects = Project::latest()->take(3)->get();
-        return view('welcome', compact('projects'));
+        return view('tampilan.isi', compact('projects'));
     }
 }

@@ -20,7 +20,7 @@
 
         {{-- Main Content --}}
         <div class="content">
-            @include('tampilan.isi')
+            @yield('content')
         </div>
 
         {{-- Footer --}}
